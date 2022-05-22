@@ -31,6 +31,10 @@ const CommentRepositoryPostgres = require('./repository/CommentRepositoryPostgre
 const AddCommentUseCase = require('../Applications/use_case/AddCommentUseCase');
 const DeleteCommentUseCase = require('../Applications/use_case/DeleteCommentUseCase');
 const GetThreadDetailUseCase = require('../Applications/use_case/GetThreadDetailUseCase');
+const RepliesRepository = require('../Domains/replies/RepliesRepository');
+const RepliesRepositoryPostgres = require('./repository/RepliesRepositoryPostgres');
+const AddRepliesUseCase = require('../Applications/use_case/AddRepliesUseCase');
+const DeleteRepliesUseCase = require('../Applications/use_case/DeleteRepliesUseCase');
 
 // creating container
 const container = createContainer();
