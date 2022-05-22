@@ -6,6 +6,7 @@ const authentications = require('../../Interfaces/http/api/authentications');
 const { extensionsPlugin } = require('../../Interfaces/http/extensions');
 
 const { threadsPlugin } = require('../../Interfaces/http/api/threads');
+const { commentsPlugin } = require('../../Interfaces/http/api/comments');
 
 const { SERVER_CONFIG, JWT_CONFIG } = require('../../Commons/helpers');
 
@@ -34,6 +35,10 @@ const createServer = async (container) => {
     },
     {
       plugin: threadsPlugin,
+      options: { container },
+    },
+    {
+      plugin: commentsPlugin,
       options: { container },
     },
   ]);
